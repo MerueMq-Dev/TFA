@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34031.279
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TFA.Domain", "TFA.Domain.csproj", "{E6DAD957-BAA6-4ECA-928C-28D222DE430E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TFA.Storage", "..\TFA.Storage\TFA.Storage.csproj", "{06E446F6-E220-44D3-B85B-83168FEFC136}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TFA.API", "..\TFA.API\TFA.API.csproj", "{46705E35-B6E3-41C9-A43D-F305CC32BAF0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E6DAD957-BAA6-4ECA-928C-28D222DE430E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E6DAD957-BAA6-4ECA-928C-28D222DE430E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E6DAD957-BAA6-4ECA-928C-28D222DE430E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E6DAD957-BAA6-4ECA-928C-28D222DE430E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06E446F6-E220-44D3-B85B-83168FEFC136}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06E446F6-E220-44D3-B85B-83168FEFC136}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06E446F6-E220-44D3-B85B-83168FEFC136}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06E446F6-E220-44D3-B85B-83168FEFC136}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46705E35-B6E3-41C9-A43D-F305CC32BAF0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46705E35-B6E3-41C9-A43D-F305CC32BAF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46705E35-B6E3-41C9-A43D-F305CC32BAF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46705E35-B6E3-41C9-A43D-F305CC32BAF0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0248B594-9A18-4B33-9A1F-6ED5F67B9E47}
+	EndGlobalSection
+EndGlobal
