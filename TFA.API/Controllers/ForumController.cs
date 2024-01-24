@@ -1,20 +1,21 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc;
-using TFA.Storage;
+using TFA.Domain.UseCases.GetForums;
+
 
 namespace TFA.API.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("forums")]
     public class ForumController : ControllerBase
     {
         [HttpGet]
-        [ProducesResponseType(200, Type = typeof(string[]))]
-        public async Task<IActionResult> GetForums([FromServices] ForumDbContext context, CancellationToken cancellationToken)
+        [ProducesResponseType(200, Type = typeof(Models.Forum[]))]
+        public async Task<IActionResult> GetForums([FromServices] IGetForumsUseCase useCase, CancellationToken cancellationToken)
         {
-             var forumTitles = await context.Forums.Select(f => f.Title).ToArrayAsync(cancellationToken);
-
-             return Ok(forumTitles);
+            var forums = await useCase.Execute(cancellationToken);            
+            
+             return Ok(forums);
         }
     }
 }
