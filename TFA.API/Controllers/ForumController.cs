@@ -1,4 +1,6 @@
+using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc;
+using TFA.Storage;
 
 namespace TFA.API.Controllers
 {
@@ -7,9 +9,12 @@ namespace TFA.API.Controllers
     public class ForumController : ControllerBase
     {
         [HttpGet]
-        public IActionResult GetName()
+        [ProducesResponseType(200, Type = typeof(string[]))]
+        public async Task<IActionResult> GetForums([FromServices] ForumDbContext context, CancellationToken cancellationToken)
         {
-            return Ok("name");
+             var forumTitles = await context.Forums.Select(f => f.Title).ToArrayAsync(cancellationToken);
+
+             return Ok(forumTitles);
         }
     }
 }
