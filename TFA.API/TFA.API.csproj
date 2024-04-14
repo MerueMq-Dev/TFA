@@ -22,6 +22,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\TFA.Storage\TFA.Storage.csproj" />
     <ProjectReference Include="..\TFA\TFA.Domain.csproj" />
   </ItemGroup>
   
