@@ -6,7 +6,7 @@ using TFA.Domain.UseCases.GetForums;
 namespace TFA.API.Controllers
 {
     [ApiController]
-    [Route("forums")]
+    [Route("forums")]   
     public class ForumController : ControllerBase
     {
         [HttpGet]

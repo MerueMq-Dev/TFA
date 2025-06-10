@@ -12,14 +12,15 @@ using TFA.Storage;
 namespace TFA.Storage.Migrations
 {
     [DbContext(typeof(ForumDbContext))]
-    [Migration("20240124131832_Initial")]
-    partial class Initial
+    [Migration("20250501093027_InitialCreate")]
+    partial class InitialCreate
     {
+        /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "6.0.23")
+                .HasAnnotation("ProductVersion", "8.0.15")
                 .HasAnnotation("Relational:MaxIdentifierLength", 63);
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
